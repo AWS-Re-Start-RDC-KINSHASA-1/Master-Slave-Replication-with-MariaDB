@@ -22,6 +22,7 @@ sudo mysql_secure_installation
 ```
 
 ### Step 3: Configure Master Instance
+
 Edit MariaDB configuration file
 
 ```bash
@@ -57,7 +58,7 @@ Step 4: Install MariaDB on Slave Instance
 
 Repeat Step 1 on the second EC2 instance.
 
-## Step 5: Configure Slave Instance
+### Step 5: Configure Slave Instance
 
 Edit MariaDB configuration file
 
@@ -90,7 +91,7 @@ CHANGE MASTER TO
   MASTER_LOG_POS=master_log_position_from_master;
 ```
 
-## Step 6: Start Slave Replication
+### Step 6: Start Slave Replication
 
 On the Slave instance:
 
@@ -98,7 +99,7 @@ On the Slave instance:
 START SLAVE;
 ```
 
-## Step 7: Verify Replication
+### Step 7: Verify Replication
 
 On the Slave instance:
 
@@ -108,7 +109,7 @@ SHOW SLAVE STATUS\G
 
 Ensure Slave_IO_Running and Slave_SQL_Running are both Yes.
 
-# Testing Replication
+### Testing Replication
 
 Create a database on the Master:
 
