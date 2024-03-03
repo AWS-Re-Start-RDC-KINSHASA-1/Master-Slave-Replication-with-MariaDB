@@ -53,8 +53,9 @@ Obtain Master Log File and Position
 
 ```sql
 SHOW MASTER STATUS;
-Step 4: Install MariaDB on Slave Instance
 ```
+
+### Step 4: Install MariaDB on Slave Instance
 
 Repeat Step 1 on the second EC2 instance.
 
